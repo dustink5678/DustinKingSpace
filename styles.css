@@ -37,7 +37,7 @@ footer {
     text-align: center;
     padding: 5px 0; /* Reduced padding for smaller trademark block */
     position: fixed;
-    width: 100%;
+    width: 30%;
     bottom: 0;
     font-size: 12px; /* Smaller font size */
 }
