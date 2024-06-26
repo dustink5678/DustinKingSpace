@@ -27,11 +27,6 @@ header {
     margin: 5px 0; /* Margin for paragraphs inside the contact info */
 }
 
-.contact-info a {
-    color: #ccc; /* Text color for links */
-    text-decoration: none; /* Remove underline from links */
-}
-
 .contact-info a:hover {
     color: white; /* Text color change on hover */
 }
