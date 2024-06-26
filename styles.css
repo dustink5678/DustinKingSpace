@@ -1,9 +1,11 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Light background color */
     color: #333; /* Text color */
 }
 
+/* Header styles */
 header {
     background-color: #800000; /* Maroon red color */
     color: white;
@@ -12,6 +14,17 @@ header {
     font-size: 24px;
 }
 
+/* Contact styles */
+.contact-info {
+    margin-top: 10px; /* Small gap between header and contact info */
+    text-align: center;
+}
+
+.contact-info p {
+    margin-bottom: 5px; /* Space between each contact detail */
+}
+
+/* Navigation styles */
 nav {
     background-color: #333; /* Dark color for the navigation bar */
     overflow: hidden;
@@ -23,6 +36,7 @@ nav a {
     color: white;
     text-align: center;
     padding: 14px 16px;
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -30,6 +44,20 @@ nav a:hover {
     color: black;
 }
 
+/* Projects section styles */
+.container {
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
 footer {
     background-color: #444;
     color: white;
@@ -44,26 +72,16 @@ footer p {
 
 footer a {
     color: #ccc; /* Text color for links */
+    text-decoration: none; /* Remove underline */
 }
 
 footer a:hover {
     color: white; /* Hover color */
 }
 
+/* Additional styles */
 .footer-bottom {
     background-color: #222;
     padding: 10px 0;
     font-size: 14px;
-}
-
-.container {
-    padding: 20px;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
