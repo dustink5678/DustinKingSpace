@@ -15,7 +15,7 @@ header {
 }
 
 /* Contact info styles (formerly footer styles) */
-.contact-info {
+contact-info {
     background-color: #333; /* Dark color for the contact info */
     color: white; /* Text color */
     padding: 20px 0; /* Padding at the top and bottom */
@@ -23,16 +23,16 @@ header {
     width: 100%; /* Full width of the container */
 }
 
-.contact-info p {
+contact-info p {
     margin: 5px 0; /* Margin for paragraphs inside the contact info */
 }
 
-.contact-info a {
+contact-info a {
     color: #ccc; /* Text color for links */
     text-decoration: none; /* Remove underline from links */
 }
 
-.contact-info a:hover {
+contact-info a:hover {
     color: white; /* Text color change on hover */
 }
 
