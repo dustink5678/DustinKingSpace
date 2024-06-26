@@ -13,7 +13,7 @@ header {
 }
 
 nav {
-    background-color: ##CCCCCC; /* Dark color for the navigation bar */
+    background-color: #333; /* Dark color for the navigation bar */
     overflow: hidden;
 }
 
@@ -31,7 +31,7 @@ nav a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: #555;
     color: white;
     padding: 20px 0;
     text-align: center;
