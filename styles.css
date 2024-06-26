@@ -14,14 +14,26 @@ header {
     font-size: 24px;
 }
 
-/* Contact styles */
+/* Contact info styles (formerly footer styles) */
 .contact-info {
-    margin-top: 10px; /* Small gap between header and contact info */
-    text-align: center;
+    background-color: #444; /* Dark gray background color */
+    color: white; /* Text color */
+    padding: 20px 0; /* Padding at the top and bottom */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Full width of the container */
 }
 
 .contact-info p {
-    margin-bottom: 5px; /* Space between each contact detail */
+    margin: 5px 0; /* Margin for paragraphs inside the contact info */
+}
+
+.contact-info a {
+    color: #ccc; /* Text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.contact-info a:hover {
+    color: white; /* Text color change on hover */
 }
 
 /* Navigation styles */
@@ -55,33 +67,4 @@ nav a:hover {
     margin: 20px 0;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styles */
-footer {
-    background-color: #444;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer a {
-    color: #ccc; /* Text color for links */
-    text-decoration: none; /* Remove underline */
-}
-
-footer a:hover {
-    color: white; /* Hover color */
-}
-
-/* Additional styles */
-.footer-bottom {
-    background-color: #222;
-    padding: 10px 0;
-    font-size: 14px;
 }
