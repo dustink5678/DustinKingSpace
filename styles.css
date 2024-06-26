@@ -34,12 +34,28 @@ nav a:hover {
 footer {
     background-color: #333;
     color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 5px 0; /* Reduced padding for smaller trademark block */
-    position: fixed;
     width: 100%;
-    bottom: 0;
-    font-size: 12px; /* Smaller font size */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ccc; /* Text color for links */
+    text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+    color: white; /* Hover color */
+}
+
+.footer-bottom {
+    background-color: #222;
+    padding: 10px 0;
+    font-size: 14px;
 }
 
 .container {
