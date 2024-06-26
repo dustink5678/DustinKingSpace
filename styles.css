@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: #4CAF50; /* Primary color */
+    background-color: #800000; /* Maroon red color */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -35,10 +35,11 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0; /* Reduced padding for smaller trademark block */
     position: fixed;
     width: 100%;
     bottom: 0;
+    font-size: 12px; /* Smaller font size */
 }
 
 .container {
