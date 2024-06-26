@@ -23,7 +23,6 @@ nav a {
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
 }
 
 nav a:hover {
@@ -45,7 +44,6 @@ footer p {
 
 footer a {
     color: #ccc; /* Text color for links */
-    text-decoration: none; /* Remove underline */
 }
 
 footer a:hover {
