@@ -16,7 +16,7 @@ header {
 
 /* Contact info styles (formerly footer styles) */
 .contact-info {
-    background-color: #444; /* Dark color for the contact info */
+    background-color: #555; /* Dark color for the contact info */
     color: white; /* Text color */
     padding: 20px 0; /* Padding at the top and bottom */
     text-align: center; /* Center-align text */
@@ -33,7 +33,7 @@ header {
 
 /* Navigation styles */
 nav {
-    background-color: #555; /* Dark gray background color for the navigation bar */
+    background-color: #660; /* Dark gray background color for the navigation bar */
     overflow: hidden;
 }
 
