@@ -3,32 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Dustin King's Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #800000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .contact-info {
+            background-color: #555;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        nav {
+            background-color: #777;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .resume-preview {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .resume-image {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+        .resume-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .resume-full {
+            flex: 1;
+            min-width: 300px;
+        }
+        .resume-full a {
+            display: inline-block;
+            background-color: #800000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .resume-full a:hover {
+            background-color: #600000;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Dustin King's Personal Website</h1>
     </header>
-        <footer class="contact-info"> <!-- Updated class to match contact-info style -->
+    <div class="contact-info">
         <p>LinkedIn: <a href="https://linkedin.com/in/dustin-king" target="_blank">www.linkedin.com/in/dustin-king</a></p>
         <p>Email: <a href="mailto:dustinisaacking@gmail.com">dustinisaacking@gmail.com</a></p>
         <p>Phone: 803-524-0068</p>
-    </footer>
+    </div>
     <nav>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a> <!-- New link for Resume section -->
+        <a href="#resume">Resume</a>
     </nav>
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
             <div class="card">
-                <p>I am a sophomore double major in Computer Information Systems and Integrated Information Technologies at the college of
+                <p>I am a sophomore double major in Computer Information Systems and Integrated Information Technologies at the
                    Molinaroli College of Engineering and Computing at the University of South Carolina. I currently hold a 3.95 GPA
-                   with a 4.0 major GPA. I also am apart of Theta Tau Professional Engineering Fraternity, Chess Club, and Cybersecruity
-                   Club here at the University of South Carolina. I have personal interests and am persuing positions for research
-                   in Cyber Security, Artificial Intellegence, and Software Engineering.</p>
+                   with a 4.0 major GPA. I also am apart of Theta Tau Professional Engineering Fraternity, Chess Club, and Cybersecurity
+                   Club here at the University of South Carolina. I have personal interests and am pursuing positions for research
+                   in Cyber Security, Artificial Intelligence, and Software Engineering.</p>
             </div>
         </section>
         <section id="projects">
@@ -42,11 +138,16 @@
                 <p>Description of Project 2.</p>
             </div>
         </section>
-        <section id="resume"> <!-- New section for Resume -->
+        <section id="resume">
             <h2>Resume</h2>
-            <div class="card">
-                <p>Here you can download my resume:</p>
-                <p><a href="resume.pdf" target="_blank">Download Resume (PDF)</a></p> <!-- Link to your PDF resume -->
+            <div class="resume-preview">
+                <div class="resume-image">
+                    <img src="/api/placeholder/600/800" alt="Resume Preview">
+                </div>
+                <div class="resume-full">
+                    <p>Click the button below to view or download the full resume in PDF format:</p>
+                    <a href="resume.pdf" target="_blank">View Full Resume (PDF)</a>
+                </div>
             </div>
         </section>
     </div>
