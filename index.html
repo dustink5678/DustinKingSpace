@@ -13,58 +13,87 @@
             margin: 0;
             padding: 0;
         }
+
         header {
-            background-color: #800000;
+            position: relative;
+            background: linear-gradient(rgba(128, 0, 0, 0.9), rgba(128, 0, 0, 0.4)), 
+                        url('background_campus.jpg') no-repeat center/cover;
             color: white;
-            padding: 10px 0;
             text-align: center;
-            font-size: 24px;
+            padding: 100px 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
         .contact-info {
-            background-color: #555;
+            background: linear-gradient(to bottom right, #444, #999);
             color: white;
             padding: 20px 0;
             text-align: center;
             width: 100%;
         }
+
         .contact-info p {
             margin: 5px 0;
         }
+
         .contact-info a {
             color: white;
             text-decoration: none;
         }
+
         .contact-info a:hover {
             text-decoration: underline;
         }
+
         nav {
+            display: flex;
             background-color: #777;
-            overflow: hidden;
         }
+
         nav a {
-            float: left;
-            display: block;
+            flex: 1; /* Evenly distribute tabs */
             color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
         }
+
         nav a:hover {
             background-color: #ddd;
             color: black;
         }
+
         .container {
             padding: 20px;
             max-width: 800px;
             margin: 0 auto;
         }
-        .card {
+
+        .card, .resume-preview {
             background-color: white;
             padding: 20px;
             margin: 20px 0;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transform: translateX(100px); /* Start off-screen to the right */
+            opacity: 0;
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
+
+        .card.visible, .resume-preview.visible {
+            transform: translateX(0); /* Slide into view */
+            opacity: 1;
+        }
+
         .resume-preview {
             display: flex;
             justify-content: space-between;
@@ -72,22 +101,26 @@
             margin-top: 40px;
             flex-wrap: wrap;
         }
+
         .resume-image {
             flex: 1;
             min-width: 300px;
             margin-right: 20px;
             margin-bottom: 20px;
         }
+
         .resume-image img {
             width: 100%;
             height: auto;
             border: 1px solid #ddd;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .resume-full {
             flex: 1;
             min-width: 300px;
         }
+
         .resume-full a {
             display: inline-block;
             background-color: #800000;
@@ -97,6 +130,7 @@
             border-radius: 5px;
             margin-top: 20px;
         }
+
         .resume-full a:hover {
             background-color: #600000;
         }
@@ -118,51 +152,30 @@
     </nav>
     <div class="container">
         <section id="about">
-            <h2 style="color: #800000;"> About Me</h2>
+            <h2 style="color: #800000;">About Me</h2>
             <div class="card">
-                <p>I am a sophomore double major in Computer Information Systems and Integrated Information Technologies at the
-                   Molinaroli College of Engineering and Computing at the University of South Carolina. I currently hold a 3.955 GPA
-                   with a 4.0 major GPA. I also am apart of Theta Tau Professional Engineering Fraternity, Chess Club, and Cybersecurity
-                   Club here at the University of South Carolina. I have personal interests and am pursuing positions for research
-                   in Cyber Security, Artificial Intelligence, and Software Engineering.</p>
+                <p>I am a sophomore double major in Computer Information Systems and Integrated Information Technologies...</p>
             </div>
         </section>
         <section id="projects">
-    <h2 style="color: #800000;">Projects</h2>
-            
-    <!-- Project 1 -->
-    <div class="card">
-        <h3>Cortana Replacement, Python Voice Assistant With API Implementation </h3>
-        <p>I am super proud of this project as it is something I have spent a long time making and refining. My favorite part is
-        the ability to perform background system commands such as skipping songs without having to tab out of your current screen!</p>
-        <!-- Button to download code PDF -->
+            <h2 style="color: #800000;">Projects</h2>
+            <div class="card">
+                <h3>Cortana Replacement, Python Voice Assistant With API Implementation</h3>
+                <p>I am super proud of this project...</p>
                 <div class="resume-full">
                     <a href="Dustin King Voice Assistant Code.pdf" target="_blank">View Full Code (PDF)</a>
                 </div>
-        <p></p>
-        <!-- Embedded YouTube video with preview -->
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/mMunhY5absg?si=aHPDhVrwJRYJifsK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </div>
-</section>
-        
-    <!-- Project 2 -->
-   <div class="card">
-    <h3>"Pickle Up" Pickleball Social Media Application</h3>
-    <p>Definitely the largest project I have worked on! I was the lead developer with a single friend for help,
-    I implemented all of the style and front end using Swift and SwiftUI in XCode, and was the primary designer of the
-    FireBase backend with assistance from my friend!</p>
-    <!-- Button to download code PDF -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mMunhY5absg" title="YouTube video player"></iframe>
+            </div>
+            <div class="card">
+                <h3>"Pickle Up" Pickleball Social Media Application</h3>
+                <p>Definitely the largest project I have worked on...</p>
                 <div class="resume-full">
                     <a href="" target="_blank">View Full Code (PDF)</a>
                 </div>
-       <p></p>
-    <!-- Embedded YouTube video with preview -->
-    <iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
-</div>
-    
-    
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID"></iframe>
+            </div>
+        </section>
         <section id="resume">
             <h2 style="color: #800000;">Resume</h2>
             <div class="resume-preview">
@@ -176,5 +189,22 @@
             </div>
         </section>
     </div>
+    <script>
+        function handleScroll() {
+            const elements = document.querySelectorAll('.card, .resume-preview');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                // Check if the element is in the viewport
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('visible');
+                } else {
+                    el.classList.remove('visible');
+                }
+            });
+        }
+    
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
 </body>
-</html> 
+</html>
