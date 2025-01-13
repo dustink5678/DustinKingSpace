@@ -151,6 +151,46 @@
         height: 100%;
         border: 0;
     }
+    .organization-images {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.organization-images {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    align-items: center;
+    gap: 20px; /* Add spacing between the images */
+    margin: 20px 0;
+}
+
+.organization-image {
+    opacity: 0; /* Initially invisible */
+    transform: translateX(-100px); /* Start off-screen to the left */
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.organization-image.image-1 {
+    width: 30%; /* 70% of the size of the other image */
+}
+
+.organization-image.image-2 {
+    width: 50%; /* Standard size for the second image */
+}
+
+.organization-image.visible {
+    opacity: 1; /* Fully visible */
+    transform: translateX(0); /* Move into position */
+}
+
+.organization-image img {
+    width: 100%; /* Scale image to container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
     </style>
 </head>
 <body>
@@ -164,6 +204,7 @@
     </div>
     <nav>
         <a href="#about">About</a>
+        <a href="#organizations">Organizations</a>
         <a href="#projects">Projects</a>
         <a href="#resume">Resume</a>
     </nav>
@@ -195,6 +236,24 @@
     </li>
 </ul>
 
+            </div>
+        </section>
+        <section id="organizations">
+            <h2 style="color: #800000;">Organizations</h2>
+            <div class="card">
+                <p>My involvement around campus has allowed me to be as succesful as I am today.
+                    I am apart of Theta Tau, a Co-Ed Professional Engineering Fraternity, and The 
+                    Gamecocks Consulting Club, the two most prestigious organzations for their respective
+                    fields.
+                </p>
+                <div class="organization-images">
+                    <div class="organization-image image-1">
+                        <img src="ThetaTau.png" alt="Theta Tau">
+                    </div>
+                    <div class="organization-image image-2">
+                        <img src="GCC.jpg" alt="Gamecocks Consulting Club">
+                    </div>
+                </div>
             </div>
         </section>
         <section id="projects">
@@ -247,21 +306,22 @@
         </section>
     </div>
     <script>
-        function handleScroll() {
-            const elements = document.querySelectorAll('.card, .resume-preview');
-            elements.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                // Check if the element is in the viewport
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    el.classList.add('visible');
-                } else {
-                    el.classList.remove('visible');
-                }
-            });
+function handleScroll() {
+    const elements = document.querySelectorAll('.card, .resume-preview, .organization-image');
+    elements.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+            setTimeout(() => {
+                el.classList.add('visible');
+            }, index * 150); // Stagger animations
+        } else {
+            el.classList.remove('visible');
         }
-    
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('load', handleScroll);
+    });
+}
+
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
     </script>
 </body>
 </html>
