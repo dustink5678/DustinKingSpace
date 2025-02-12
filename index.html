@@ -50,6 +50,7 @@
             text-decoration: none;
         }
 
+        .contact-info a:hover {
             text-decoration: underline;
         }
 
@@ -135,61 +136,54 @@
         }
 
         .video-wrapper {
-        position: relative;
-        width: 100%;
-        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-        height: 0;
-        overflow: hidden;
-    }
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
 
-    .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 0;
-    }
-    .organization-images {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 20px 0;
-}
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
-.organization-images {
-    display: flex;
-    justify-content: center; /* Center the images horizontally */
-    align-items: center;
-    gap: 20px; /* Add spacing between the images */
-    margin: 20px 0;
-}
+        .organization-images {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            align-items: center;
+            gap: 20px; /* Add spacing between the images */
+            margin: 20px 0;
+        }
 
-.organization-image {
-    opacity: 0; /* Initially invisible */
-    transform: translateX(-20px); /* Start off-screen to the left */
-    transition: transform 0.7s ease, opacity 0.7s ease;
-}
+        .organization-image {
+            opacity: 0; /* Initially invisible */
+            transform: translateX(-20px); /* Start off-screen to the left */
+            transition: transform 0.7s ease, opacity 0.7s ease;
+        }
 
-.organization-image.image-1 {
-    width: 20%; /* 70% of the size of the other image */
-}
+        .organization-image.image-1 {
+            width: 20%; /* 70% of the size of the other image */
+        }
 
-.organization-image.image-2 {
-    width: 50%; /* Standard size for the second image */
-}
+        .organization-image.image-2 {
+            width: 50%; /* Standard size for the second image */
+        }
 
-.organization-image.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateX(0); /* Move into position */
-}
+        .organization-image.visible {
+            opacity: 1; /* Fully visible */
+            transform: translateX(0); /* Move into position */
+        }
 
-.organization-image img {
-    width: 100%; /* Scale image to container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Optional: rounded corners */
-}
-
+        .organization-image img {
+            width: 100%; /* Scale image to container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: rounded corners */
+        }
     </style>
 </head>
 <body>
@@ -212,29 +206,28 @@
             <h2 style="color: #800000;">About Me</h2>
             <div class="card">
                 <p>
-    My name is Dustin King, I am a student at the University of South Carolina, double majoring in Computer Information
-    Systems and Integrated Information Technology, with a minor in Business Information Systems. With a 3.958 GPA and recognition
-    as a Dean Scholar and Palmetto Fellow Scholar, I thrive in leadership roles, innovative research, and collaborative team settings.
-</p>
-<ul>
-    <li>
-        <strong>Consulting Excellence:</strong> Secured first place in a Gamecocks Consulting Club case competition, demonstrating strategic problem-solving and client communication skills.
-    </li>
-    <li>
-        <strong>Cutting-Edge Research:</strong> Contributed to AI-powered Navy autonomous vessel perception systems within a $5 million multidisciplinary project.
-    </li>
-    <li>
-        <strong>Entrepreneurial Projects:</strong>
-        <ul>
-            <li>Built a Python voice assistant automating tasks like email and calendar management.</li>
-            <li>Developing a Swift/SwiftUI-based pickleball social media app compliant with Apple App Store standards.</li>
-        </ul>
-    </li>
-    <li>
-        <strong>Technical Expertise:</strong> Advanced proficiency in Python and Java, with substantial experience in Swift, C++, and front-end web development.
-    </li>
-</ul>
-
+                    My name is Dustin King, I am a student at the University of South Carolina, double majoring in Computer Information
+                    Systems and Integrated Information Technology, with a minor in Business Information Systems. With a 3.958 GPA and recognition
+                    as a Dean Scholar and Palmetto Fellow Scholar, I thrive in leadership roles, innovative research, and collaborative team settings.
+                </p>
+                <ul>
+                    <li>
+                        <strong>Consulting Excellence:</strong> Secured first place in a Gamecocks Consulting Club case competition, demonstrating strategic problem-solving and client communication skills.
+                    </li>
+                    <li>
+                        <strong>Cutting-Edge Research:</strong> Contributed to AI-powered Navy autonomous vessel perception systems within a $5 million multidisciplinary project.
+                    </li>
+                    <li>
+                        <strong>Entrepreneurial Projects:</strong>
+                        <ul>
+                            <li>Built a Python voice assistant automating tasks like email and calendar management.</li>
+                            <li>Developing a Swift/SwiftUI-based pickleball social media app compliant with Apple App Store standards.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Technical Expertise:</strong> Advanced proficiency in Python and Java, with substantial experience in Swift, C++, and front-end web development.
+                    </li>
+                </ul>
             </div>
         </section>
         <section id="organizations">
@@ -287,32 +280,32 @@
             <h2 style="color: #800000;">Resume</h2>
             <div class="resume-preview">
                 <div class="resume-image">
-                    <img src="Dustin King Resume.docx.pdf" alt="Resume Preview">
+                    <img src="Dustin King Resume.png" alt="Resume Preview">
                 </div>
                 <div class="resume-full">
                     <p>Click the button below to view or download the full resume in PDF format:</p>
-                    <a href="Dustin King Resume.pdf" target="_blank">View Full Resume (PDF)</a>
+                    <a href="Dustin King Resume.docx.pdf" target="_blank">View Full Resume (PDF)</a>
                 </div>
             </div>
         </section>
     </div>
     <script>
-function handleScroll() {
-    const elements = document.querySelectorAll('.card, .resume-preview, .organization-image');
-    elements.forEach((el, index) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            setTimeout(() => {
-                el.classList.add('visible');
-            }, index * 150); // Stagger animations
-        } else {
-            el.classList.remove('visible');
+        function handleScroll() {
+            const elements = document.querySelectorAll('.card, .resume-preview, .organization-image');
+            elements.forEach((el, index) => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 150); // Stagger animations
+                } else {
+                    el.classList.remove('visible');
+                }
+            });
         }
-    });
-}
 
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
     </script>
 </body>
 </html>
